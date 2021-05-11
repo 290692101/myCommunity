@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ch.chMbTest.repository.UserMapper">
+    <!--查-->
+    <select id="Sel" resultType="User">
+        select * from user0319 where id = #{id}
+    </select>
+
+    <select id="GetAll" resultType="User">
+        select id,userName,passWord,realName,userEmail eMail from user0319
+    </select>
+
+    <!-- 优先根据id查找 id查找不到就根据用户名查找 用户名也为空 就返回空值 ,-->
+    <select id="selectByIdOrUserName" resultType="User">
+            select id,userName,passWord,realName,userEmail eMail
+            from user0319
+            where 1=1
+            <choose>
+                <when test="id!=null">
+                    and id =#{id}
+                </when>
+
+                <when test="userName!=null and userName !=''">
+                    and userName = #{userName}
+                </when>
+
+                <otherwise>
+                <!--如果没有这个条件 所有结果都会被查出来-->
+                    and 1=2
+                </otherwise>
+            </choose>
+
+
+    </select>
+
+    <!--foreach标签试用 根据一个id的list返回所有的user-->
+    <select id="selectByIdList" resultType="User">
+        select id,userName,passWord,realName,userEmail eMail
+        from user0319
+        where id in
+        <foreach collection="list" open="(" close=")" separator="," item="id" index="i">
+        #{id}
+        </foreach>
+
+    </select>
+
+    <!--高级查询试用 先是一个一对一 根据用户id 返回用户的列和用户对应的角色的列
+    根据别名的形式将表中属性映射 到对象和对象的属性上-->
+    <!--通过ur表来维护用户和角色的关系-->
+    <select id="selectUserAndRoleById" resultType="User">
+    select u.userName,
+            u.id,
+            u.passWord,
+            u.userEmail eMail,
+            r.id "role.id",
+            r.role_name "role.roleName",
+            r.enabled   "role.enabled",
+            r.create_by "role.createBy",
+            r.create_time "role.createTime"
+
+    from user0319 u
+    join user_role0329 ur on ur.user_id =u.id
+    join role0329 r on ur.role_id =r.id
+    where u.id=#{id}
+    </select>
+
+
+
+
+
+
+
+    <!--增-->
+    <!--试一下这个方法到底需不需要指定type，能否自动扫描出来  -->
+    <!--是可以自动的扫出来滴-->
+    <insert id="add" >
+        insert into user0319(id,userName,passWord,realName)
+        values (#{id},#{userName},#{passWord},#{realName})
+
+
+        <!--在这里试一下是否可以把主键获取到-->
+        <selectKey keyColumn="id" resultType="int" keyProperty="id" order="AFTER">
+        select LAST_INSERT_ID()
+        </selectKey>
+
+    </insert>
+    
+    <!--使用foreach实现批量插入多个元素 使用.符号访问对象里的属性值-->
+    <!--后面两个属性值不知道能干啥。。-->
+    <insert id="insertList" useGeneratedKeys="true" keyProperty="id">
+        insert into user0319(id,userName,passWord,userEmail,realName)
+        values
+        <foreach collection="list" item="user" separator=",">
+            (
+            #{user.id},#{user.userName},#{user.passWord},#{user.eMail},#{user.realName}
+            )
+        </foreach>
+
+
+    </insert>
+    
+    
+    <!--动态sql的增 可以让你如果传入的值是空的话 插入表不使用你java传来的空值 而是使用sql中列的默认值-->
+    <!-->这个功能没有写 因为现在的mytabis默认就支持了<-->
+
+    <!--改-->
+    <update id="update">
+        update user0319
+        set userName=#{userName},passWord=#{passWord},realName=#{realName},userEmail=#{eMail}
+        where id=#{id}
+    </update>
+
+    <!--使用foreach访问map的方式实现动态的更新数据库-->
+    <!--collection的值就是——patameter 用就完了-->
+    <update id="updateByMap">
+        update user0319
+        set
+        <foreach collection="_parameter" item="val" index="key" separator=",">
+            ${key}=#{val}
+        </foreach>
+        <!--map里会保证一定有id这个key-->
+        where id=#{id}
+    </update>
+
+
+
+
+    <!--删-***********************************************************************-->
+    <delete id="deleteById">
+    delete from user0319
+    where id=#{id};
+    </delete>
+
+    <!--resultMap配置与测试****************************************************-->
+    <!--写一个方便复用的resultMap-->
+    <resultMap id="userMap" type="User">
+        <id property="id" column="id"/>
+        <result property="userName" column="userName"/>
+        <result property="eMail" column="userEmail"/>
+        <result property="realName" column="realName"/>
+        <result property="passWord" column="passWord"/>
+
+    </resultMap>
+    <!--resultMap测试-->
+    <select id="selectById2" resultMap="userMap">
+        select * from user0319 where id=#{id}
+    </select>
+
+
+    <!--继承userMap-->
+    <resultMap id="userRoleMap" extends="userMap" type="User">
+        <!--id property="role.id" column="id"/将这行注释改成association标签的配置方式-->
+        <!--三个属性分别是 属性，前缀 和对应的实体类-->
+<!--        <association property="role" columnPrefix="role_" javaType="Role">-->
+<!--        -->
+<!--        <result property="role.roleName" column="role_name"/>-->
+<!--        <result property="role.enabled" column="enabled"/>-->
+<!--        <result property="role.createBy" column="create_by"/>-->
+<!--        <result property="role.createTime" column="create_time" jdbcType="TIMESTAMP"/>-->
+<!--        </association>-->
+        <!--还有一种实现方法是直接引入定义好的map-->
+        <!--这里应该会扫描路径下的所有map-->
+        <association property="role" columnPrefix="role_" resultMap="roleMap"/>
+
+    </resultMap>
+
+    <select id="selectUserAndRoleById2" resultMap="userRoleMap">
+    select u.userName,
+            u.id,
+            u.passWord,
+            u.userEmail ,
+            r.id role_id,
+            r.role_name role_role_name,
+            r.enabled  role_enabled,
+            r.create_by role_create_by,
+            r.create_time role_create_time,
+
+
+
+
+        from user0319 u
+    join user_role0329 ur on ur.user_id =u.id
+    join role0329 r on ur.role_id =r.id
+
+
+    where u.id=#{id}
+    </select>
+
+    <resultMap id="userRoleMapSelect" extends="userMap" type="User">
+        <!--使用association整一个嵌套查询-->
+        <!--要传入的就是这个role_id-->
+        <!--引用的时候要使用全限定名哦-->
+        <!--加入一个fetchtype实现延迟加载-->
+        <association property="role"
+                     column="{id=role_id}"
+                     select="com.ch.chMbTest.repository.RoleMapper.selectRoleById"
+                    fetchType="lazy"
+        />
+    </resultMap>
+
+
+
+    <!--嵌套查询的select-->
+    <select id="selectUserAndRoleByIdSelect" resultMap="userRoleMapSelect">
+        select u.userName,
+            u.id,
+            u.passWord,
+            u.userEmail ,
+            ur.role_id
+        from user0319 u
+        inner join user_role0329 ur
+        on u.id=ur. user_id
+        where u.id=#{id}
+    </select>
+    <!--使用collection 而不是asscition-->
+    <!--引用其他文件下的还是要使用全限定名-->
+    <resultMap id="userRoleListMap2" extends="userMap" type="User">
+
+<!--        <collection property="roleList" columnPrefix="role_" resultMap="com.ch.chMbTest.repository.RoleMapper.roleMap"/>-->
+    <!--将role的resultMap修改为带有多个权限的那个map-->
+        <collection property="roleList" columnPrefix="role_"
+                    resultMap="com.ch.chMbTest.repository.RoleMapper.rolePrivilegeListMap"/>
+    </resultMap>
+
+    <!--一次查询 返回所有用户及其拥有的角色-->
+    <select id="selectAllUserAndRoles" resultMap="userRoleListMap2">
+        <!--添加权限表信息-->
+
+    select u.userName,
+            u.id,
+            u.passWord,
+            u.userEmail ,
+            r.id role_id,
+            r.role_name role_role_name,
+            r.enabled  role_enabled,
+            r.create_by role_create_by,
+            r.create_time role_create_time,
+
+            p.id role_privilege_id,
+        p.privilege_name role_privilege_privilege_name,
+        p.privilege_url role_privilege_privilege_url
+
+
+
+        from user0319 u
+    join user_role0329 ur on ur.user_id =u.id
+    join role0329 r on ur.role_id =r.id
+
+    join role_privilege0331 rp on rp.role_id =r.id
+    join privilege0331 p on p.id=rp.privilege_id
+    </select>
+
+    <!--调用子查询的resultMap，调用了role那边的子查询-->
+    <resultMap id="userRoleListMapSelect" extends="userMap" type="User" >
+        <collection property="roleList"
+                    select="com.ch.chMbTest.repository.RoleMapper.selectRoleByUserId"
+                    fetchType="lazy"
+                    column="{id=id}"/>
+    </resultMap>
+
+
+    <!--根据userId返回user user里有role role里有list-->
+    <select id="selectAllUserAndRolesByUserId" resultMap="userRoleListMapSelect">
+        select *
+        from user0319
+
+    </select>
+
+
+
+    <!--调用存储过程实例1-->
+    <!--注意 out的这些值要和对象的属性值对应上-->
+    <select id="selectUserById" statementType="CALLABLE" useCache="false" >
+        {call select_user_by_id(
+            #{id,mode=IN},
+            #{userName,mode=OUT,jdbcType=VARCHAR,javaType=String},
+            #{passWord,mode=OUT,jdbcType=VARCHAR,javaType=String},
+            #{eMail,mode=OUT,jdbcType=VARCHAR},
+            #{realName,mode=OUT,jdbcType=VARCHAR,javaType=String}
+
+        )}
+
+
+
+    </select>
+
+    <!--调用存储过程的实例2-->
+    <!--根据角色名字的分页查询 且返回结果对应的总数-->
+    <select id="selectUserPage" statementType="CALLABLE" useCache="false" resultMap="userMap">
+        <!--调用存储过程-->
+        {call select_user_page(
+        #{userName,mode=IN},
+        #{offset ,mode=IN},
+        #{limit,mode=IN},
+        #{total,mode=OUT,jdbcType=BIGINT}
+
+        )}
+    </select>
+
+    <!--调用存储过程实例3-->
+    <!--使用insert标签-->
+    <insert id="insertUserAndRoles" statementType="CALLABLE" >
+        {call insert_user_and_roles(
+            #{user.userName,mode=IN},
+            #{user.passWord,mode=IN},
+            #{user.eMail,mode=IN},
+            #{user.realName,mode=IN},
+            #{roleIds,mode=IN},
+            #{user.id,mode=OUT,jdbcType=BIGINT}
+
+        )
+
+        }
+
+    </insert>
+
+    <delete id="deleteUserById" statementType="CALLABLE">
+        {call delete_user_by_id (#{id,mode=IN})}
+    </delete>
+
+
+
+
+</mapper>
+

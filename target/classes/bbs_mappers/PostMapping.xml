@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bbs.dao.PostMapper">
+    <!--普通帖子类的映射配置文件-->
+    <resultMap id="PostMap" type="Post">
+        <id property="id" column="post_id"/>
+        <id property="userId" column="user_id"/>
+        <id property="type" column="entity_type"/>
+        <id property="topicId" column="topic_id"/>
+        <id property="content" column="post_content"/>
+        <id property="createTime" column="create_time"/>
+
+    </resultMap>
+
+    <!--来一个resultMap建立映射-->
+    <sql id = "insertFields">
+    user_id,entity_type,topic_id,post_content,create_time
+    </sql>
+
+    <sql id = "selectFields">
+    post_id,user_id,entity_type,topic_id,post_content,create_time
+    </sql>
+
+    <!--增-->
+    <insert id="insertPost" parameterType="Post" keyProperty="id" >
+        insert into post_bbs (<include refid="insertFields"></include>)
+        values (#{userId},#{type},#{topicId},#{content},#{createTime})
+        <!--获取新插入的对象的主键 并映射到新插入的对象的id中-->
+        <selectKey keyColumn="topic_id" resultType="int" keyProperty="id" order="AFTER">
+            select LAST_INSERT_ID()
+        </selectKey>
+
+    </insert>
+
+    <!--查-->
+    <!--分页查询普通帖信息-->
+    <select id="selectTopicPosts" resultMap="PostMap">
+        select <include refid="selectFields"></include>
+        from post_bbs
+<!--        where digest!=2-->
+<!--        &lt;!&ndash;是否是查询单个用户的主题帖&ndash;&gt;-->
+<!--        <if test="userId!=0">-->
+<!--            and user_id=#{userId}-->
+<!--        </if>-->
+        where topic_id=#{topicId}
+        <if test="lz==1">
+            and entity_type=1
+        </if>
+        <choose>
+
+            <when test="desc==1">
+               order by  create_time desc
+            </when>
+            <otherwise>
+                order by  create_time
+            </otherwise>
+
+
+        </choose>
+
+        limit #{limit} offset #{offset}
+    </select>
+
+
+</mapper>
