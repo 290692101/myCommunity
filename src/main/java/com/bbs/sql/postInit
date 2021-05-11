@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS `post_bbs`;
+SET character_set_client = utf8mb4 ;
+/*普通帖表*/
+CREATE TABLE `post_bbs` (
+  `post_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `post_type` int(11) DEFAULT NULL COMMENT '帖子类型 1主题帖 2 回复帖',
+  `topic_id` int(11) DEFAULT NULL,
+
+  `post_content` text   COMMENT '帖子内容',
+
+
+  `create_time` timestamp NULL DEFAULT NULL,
+
+  PRIMARY KEY (`post_id`),
+  KEY `index_user_id` (`user_id`),
+  KEY `index_entity_id` (`topic_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

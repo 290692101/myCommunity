@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bbs.dao.TopicMapper">
+    <!--主题帖类的映射配置文件-->
+    <resultMap id="topicMap" type="Topic">
+        <id property="id" column="topic_id"/>
+        <id property="userId" column="user_id"/>
+        <id property="title" column="topic_title"/>
+        <id property="digest" column="digest"/>
+        <id property="createTime" column="create_time"/>
+        <id property="lastPost" column="last_post"/>
+        <id property="views" column="topic_views"/>
+        <id property="replies" column="topic_replies"/>
+
+    </resultMap>
+    <!--来一个resultMap建立映射-->
+
+    <!--可重用的sql语句们-->
+    <sql id = "selectFields">
+        topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies
+    </sql>
+
+    <sql id = "insertFields">
+        user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies
+    </sql>
+
+    <!--查-->
+    <select id="selectTopicByTopicId" resultMap="topicMap">
+        select *
+        from topic_bbs
+        where topic_id=#{topicId}
+    </select>
+
+    <select id="getTopicCount" resultType="int">
+        select COUNT(*) FROM topic_bbs
+    </select>
+
+    <!--增-->
+    <insert id="insertTopic" parameterType="Topic" keyProperty="id" >
+        insert into topic_bbs (<include refid="insertFields"></include>)
+        values (#{userId},#{title},#{digest},#{createTime},#{lastPost},#{views},#{replies})
+        <!--获取新插入的对象的主键 并映射到新插入的对象的id中-->
+        <selectKey keyColumn="topic_id" resultType="int" keyProperty="id" order="AFTER">
+            select LAST_INSERT_ID()
+        </selectKey>
+
+    </insert>
+
+    <!--查-->
+    <!--分页查询主题帖信息-->
+    <!--根据digest字段不显示拉黑的帖子，默认按照回复时间排序-->
+    <select id="selectTopics" resultMap="topicMap">
+        select <include refid="selectFields"></include>
+        from topic_bbs
+        where digest!=2
+        <!--是否是查询单个用户的主题帖-->
+        <if test="userId!=0">
+            and user_id=#{userId}
+        </if>
+        order by digest desc,last_post desc
+        limit #{limit} offset #{offset}
+    </select>
+
+    <!--改-->
+    <update id="updateTopicByMap">
+        update topic_bbs
+        set 
+        <foreach collection="_parameter" item="val" index="key" separator=",">
+            ${key}=#{val}
+        </foreach>
+        <!--保证map里一定有id且有效-->
+        where topic_id=#{topic_id}
+    </update>
+
+    <update id="updateTopicViews">
+        update topic_bbs
+        set topic_views=topic_views+1
+        where topic_id=#{topicId}
+    </update>
+
+    <update id="updateTopicReplies">
+        update topic_bbs
+        set topic_replies=topic_replies+1
+        where topic_id=#{topicId}
+    </update>
+
+</mapper>

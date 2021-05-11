@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--先建一个权限的映射关系-->
+<mapper namespace="com.ch.chMbTest.repository.PrivilegeMapper">
+    <resultMap id="privilegeMap" type="Privilege">
+        <id property="id" column="id"/>
+        <result property="privilegeName" column="privilege_name"/>
+        <result property="privilegeUrl" column="privilege_url"/>
+    </resultMap>
+
+    <!--权限map的测试方法-->
+    <select id="selectPrivilegeById" resultMap="privilegeMap">
+        select * from privilege0331
+         where id = #{id}
+    </select>
+
+    <!--查询方法 根据角色id返回角色对应的所有权限-->
+    <select id="selectPrivilegeByRoleId" resultMap="privilegeMap">
+        select p.*
+        from  privilege0331 p
+        join role_privilege0331 rp on p.id=rp.privilege_id
+         where rp.role_id=#{id}
+    </select>
+
+</mapper>
