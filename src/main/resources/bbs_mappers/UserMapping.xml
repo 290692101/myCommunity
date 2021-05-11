@@ -49,5 +49,16 @@
         where id=#{userId}
     </update>
 
+    <!--改-->
+    <update id="updateUserByMap">
+        update user_bbs
+        set
+        <foreach collection="_parameter" item="val" index="key" separator=",">
+            ${key}=#{val}
+        </foreach>
+        <!--保证map里一定有id且有效-->
+        where id=#{id}
+    </update>
+
 
 </mapper>

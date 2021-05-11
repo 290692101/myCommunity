@@ -57,6 +57,16 @@ public class PostController {
     }
 
     /**
+     * 异步请求 计算主题帖的总页数
+     * @return
+     */
+    @GetMapping(value = "/topics/pageNum")
+    public JsonResult cacPageNum(){
+        Integer res=ps.getTopicPageNum(7);
+        return ResultTool.success(res);
+    }
+
+    /**
      *浏览功能 浏览主题帖的子内容
      * @param topicId
      * @param lz 1为选定只看楼主 默认为0

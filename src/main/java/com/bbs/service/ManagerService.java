@@ -11,7 +11,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 后台管理模块
@@ -56,13 +58,22 @@ public class ManagerService {
 
     /**
      * 修改密码服务
-     * @param username 用户名
+     * @param userId 用户id
      * @param npassword 新的用户密码
      * @return
      */
-    public boolean updateUser(String username,String npassword){
-        return true;
+    public boolean updateUserPassword(Integer userId,String npassword){
+        Map<String,Object> map=new HashMap<>();
+        map.put("id",userId);
+        //密码的哈希编码器
+        PasswordEncoder bp=new BCryptPasswordEncoder();
 
+        map.put("password",bp.encode(npassword));
+        int res=um.updateUserByMap(map);
+        if(res==1) {
+            return true;
+        }
+        return false;
     }
 
     /**

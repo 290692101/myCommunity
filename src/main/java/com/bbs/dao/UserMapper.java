@@ -3,6 +3,8 @@ package com.bbs.dao;
 import com.bbs.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.Map;
+
 @Mapper
 public interface UserMapper {
 
@@ -23,5 +25,15 @@ public interface UserMapper {
      * @return
      */
     User selectUserByUsername(String username);
+
+    /**
+     * 根据map修改user的特定字段
+     * 使用动态sql的foreach标签
+     *
+     * 0511通过测试
+     * @param map
+     * @return
+     */
+    int updateUserByMap(Map<String,Object> map);
 
 }

@@ -14,6 +14,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 //自定义数据访问层的单元测试
 @RunWith(SpringRunner.class)
@@ -58,6 +60,15 @@ public class UserTest {
     @Test
     public void selectUserByUname(){
         User res=um.selectUserByUsername("lch6");
+    }
+
+    //测试动态修改user
+    @Test
+    public void updateUserByMap(){
+        Map<String,Object> map=new HashMap<>();
+        map.put("id",1);
+        map.put("password","encode");
+        um.updateUserByMap(map);
     }
 
 
