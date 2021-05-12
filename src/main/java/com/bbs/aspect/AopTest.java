@@ -1,7 +1,7 @@
 package com.bbs.aspect;
 
 //引入了aop包spring就会默认的启动aop功能
-//?
+//???
 import com.bbs.res.JsonResult;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
