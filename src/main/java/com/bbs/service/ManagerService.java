@@ -58,6 +58,8 @@ public class ManagerService {
 
     /**
      * 修改密码服务
+     *
+     * 0511通过测试
      * @param userId 用户id
      * @param npassword 新的用户密码
      * @return

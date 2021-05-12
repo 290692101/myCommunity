@@ -1380,3 +1380,406 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 2021-05-11 22:31:19.108  INFO 8336 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-05-11 22:31:19.109  INFO 8336 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-05-11 22:31:19.123  INFO 8336 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-11 22:39:13.884  INFO 9076 --- [main] bbs.service.ManagerServiceTest           : Starting ManagerServiceTest on home-pc with PID 9076 (started by 290 in C:\Users\290\Desktop\demo0219)
+2021-05-11 22:39:13.886  INFO 9076 --- [main] bbs.service.ManagerServiceTest           : The following profiles are active: bbs
+2021-05-11 22:39:15.245  INFO 9076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-11 22:39:15.296  INFO 9076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 JPA repository interfaces.
+2021-05-11 22:39:16.353  INFO 9076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:39:16.389  INFO 9076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-11 22:39:16.395  WARN 9076 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-05-11 22:39:17.086  INFO 9076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-11 22:39:17.175  INFO 9076 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-11 22:39:17.287  INFO 9076 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-05-11 22:39:17.366  WARN 9076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-11 22:39:17.614  INFO 9076 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-11 22:39:17.854  INFO 9076 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-05-11 22:39:18.209  INFO 9076 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-11 22:39:18.225  INFO 9076 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:39:19.550  INFO 9076 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@103478b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@16949dfa, org.springframework.security.web.header.HeaderWriterFilter@19e801b5, org.springframework.web.filter.CorsFilter@270f7b4d, org.springframework.security.web.authentication.logout.LogoutFilter@4ae958b0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3cf70afa, org.springframework.security.web.session.ConcurrentSessionFilter@45b27ad3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43778371, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e2c8ef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56b704ea, org.springframework.security.web.session.SessionManagementFilter@50f05307, org.springframework.security.web.access.ExceptionTranslationFilter@6a04d2a4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@545f0b6]
+2021-05-11 22:39:20.141  WARN 9076 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-11 22:39:20.550  INFO 9076 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-11 22:39:20.551  INFO 9076 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-11 22:39:20.564  INFO 9076 --- [main] bbs.service.ManagerServiceTest           : Started ManagerServiceTest in 7.234 seconds (JVM running for 8.443)
+2021-05-11 22:39:21.021 DEBUG 9076 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==>  Preparing: update user_bbs set password=? , id=? where id=? 
+2021-05-11 22:39:21.057 DEBUG 9076 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==> Parameters: $2a$10$VsH577M.uEKd5et.xtOKIut0.4umGftYClfGx1eZsrFdPk7MoHZA.(String), 1(Integer), 1(Integer)
+2021-05-11 22:39:21.061 DEBUG 9076 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : <==    Updates: 1
+2021-05-11 22:39:21.062  WARN 9076 --- [main] bbs.dao.UserTest                         : true
+2021-05-11 22:39:21.083  INFO 9076 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:39:21.086  INFO 9076 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:39:21.087  INFO 9076 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-11 22:39:21.102  INFO 9076 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-11 22:40:05.475  INFO 1776 --- [main] bbs.service.ManagerServiceTest           : Starting ManagerServiceTest on home-pc with PID 1776 (started by 290 in C:\Users\290\Desktop\demo0219)
+2021-05-11 22:40:05.476  INFO 1776 --- [main] bbs.service.ManagerServiceTest           : The following profiles are active: bbs
+2021-05-11 22:40:06.593  INFO 1776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-11 22:40:06.650  INFO 1776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 JPA repository interfaces.
+2021-05-11 22:40:07.749  INFO 1776 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:40:07.786  INFO 1776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-11 22:40:07.793  WARN 1776 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-05-11 22:40:08.498  INFO 1776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-11 22:40:08.588  INFO 1776 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-11 22:40:08.691  INFO 1776 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-05-11 22:40:08.753  WARN 1776 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-11 22:40:08.999  INFO 1776 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-11 22:40:09.259  INFO 1776 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-05-11 22:40:09.647  INFO 1776 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-11 22:40:09.661  INFO 1776 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:40:10.995  INFO 1776 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2759749, org.springframework.security.web.context.SecurityContextPersistenceFilter@31f1b268, org.springframework.security.web.header.HeaderWriterFilter@16949dfa, org.springframework.web.filter.CorsFilter@4efed0e0, org.springframework.security.web.authentication.logout.LogoutFilter@32dbca45, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45832b85, org.springframework.security.web.session.ConcurrentSessionFilter@144440f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7598d675, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@459e120b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ac0ed65, org.springframework.security.web.session.SessionManagementFilter@43778371, org.springframework.security.web.access.ExceptionTranslationFilter@8ee03f5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59b3f754]
+2021-05-11 22:40:11.568  WARN 1776 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-11 22:40:11.974  INFO 1776 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-11 22:40:11.976  INFO 1776 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-11 22:40:11.985  INFO 1776 --- [main] bbs.service.ManagerServiceTest           : Started ManagerServiceTest in 7.05 seconds (JVM running for 8.209)
+2021-05-11 22:40:12.417 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==>  Preparing: update user_bbs set password=? , id=? where id=? 
+2021-05-11 22:40:12.459 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==> Parameters: $2a$10$HokGt8IHRBtXHxSLzFkfgehP91XOTEHYUqY9cucZe5o7RJiQ54b0C(String), 1(Integer), 1(Integer)
+2021-05-11 22:40:12.463 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : <==    Updates: 1
+2021-05-11 22:40:12.464  WARN 1776 --- [main] bbs.dao.UserTest                         : true
+2021-05-11 22:40:12.551 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==>  Preparing: update user_bbs set password=? , id=? where id=? 
+2021-05-11 22:40:12.552 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==> Parameters: $2a$10$gmfCWhpZ5ExakUaUi16EY.ihL0fqpCJk7GAa.ADgZGfUkiZnVpyHG(String), 1000(Integer), 1000(Integer)
+2021-05-11 22:40:12.555 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : <==    Updates: 0
+2021-05-11 22:40:12.555  WARN 1776 --- [main] bbs.dao.UserTest                         : false
+2021-05-11 22:40:12.573  INFO 1776 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:40:12.576  INFO 1776 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:40:12.577  INFO 1776 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-11 22:40:12.589  INFO 1776 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-11 22:45:12.538  INFO 10116 --- [main] com.bbs.bbsApp                           : Starting bbsApp on home-pc with PID 10116 (C:\Users\290\Desktop\demo0219\target\classes started by 290 in C:\Users\290\Desktop\demo0219)
+2021-05-11 22:45:12.540 DEBUG 10116 --- [main] com.bbs.bbsApp                           : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2021-05-11 22:45:12.540  INFO 10116 --- [main] com.bbs.bbsApp                           : The following profiles are active: bbs
+2021-05-11 22:45:13.368  INFO 10116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-11 22:45:13.401  INFO 10116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 JPA repository interfaces.
+2021-05-11 22:45:14.147  INFO 10116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-11 22:45:14.156  INFO 10116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-11 22:45:14.156  INFO 10116 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2021-05-11 22:45:14.293  INFO 10116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-11 22:45:14.293  INFO 10116 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1702 ms
+2021-05-11 22:45:14.547  INFO 10116 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:45:14.563  INFO 10116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-11 22:45:14.565  WARN 10116 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-05-11 22:45:14.916  INFO 10116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-11 22:45:14.989  INFO 10116 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-11 22:45:15.037  INFO 10116 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-05-11 22:45:15.061  WARN 10116 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-11 22:45:15.183  INFO 10116 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-11 22:45:15.313  INFO 10116 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-05-11 22:45:15.467  INFO 10116 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-11 22:45:15.475  INFO 10116 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:45:16.319  INFO 10116 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61be6051, org.springframework.security.web.context.SecurityContextPersistenceFilter@77476fcf, org.springframework.security.web.header.HeaderWriterFilter@69d58731, org.springframework.web.filter.CorsFilter@13c18bba, org.springframework.security.web.authentication.logout.LogoutFilter@34070bd2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@dd9de63, org.springframework.security.web.session.ConcurrentSessionFilter@58583a2d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a41caed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74bfdd66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33373f70, org.springframework.security.web.session.SessionManagementFilter@2e0163cb, org.springframework.security.web.access.ExceptionTranslationFilter@7c048b30, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@579dde54]
+2021-05-11 22:45:16.533  WARN 10116 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-11 22:45:16.841  INFO 10116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-11 22:45:16.843  INFO 10116 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-11 22:45:16.844  INFO 10116 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-11 22:45:16.854  INFO 10116 --- [main] com.bbs.bbsApp                           : Started bbsApp in 4.752 seconds (JVM running for 5.921)
+2021-05-11 22:45:38.135  INFO 10116 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-11 22:45:38.136  INFO 10116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-11 22:45:38.162  INFO 10116 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2021-05-11 22:45:38.476  WARN 10116 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [243] milliseconds.
+2021-05-11 22:45:46.382 DEBUG 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:45:46.403 DEBUG 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:45:46.413 TRACE 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:45:46.414 TRACE 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$bOcomCY5iLt4vD8382B2BuHhZJQzdcqb.DA6smGFu/GP1.MwZcw7a, 290@qq.com, 0, 1, 31, 2021-04-26 17:31:55
+2021-05-11 22:45:46.416 DEBUG 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:45:51.828  INFO 10116 --- [http-nio-8080-exec-4] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 22:45:51], 访问了[com.bbs.controller.ManagerContorller.updateUserPassword].
+2021-05-11 22:45:51.832 DEBUG 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:45:51.834 DEBUG 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:45:51.836 TRACE 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:45:51.837 TRACE 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$bOcomCY5iLt4vD8382B2BuHhZJQzdcqb.DA6smGFu/GP1.MwZcw7a, 290@qq.com, 0, 1, 31, 2021-04-26 17:31:55
+2021-05-11 22:45:51.837 DEBUG 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:45:51.932  INFO 10116 --- [http-nio-8080-exec-4] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 22:45:51], [com.bbs.controller.ManagerContorller.updateUserPassword]方法执行完毕.返回码为[1001]
+2021-05-11 22:46:12.285  INFO 10116 --- [http-nio-8080-exec-2] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 22:46:12], 访问了[com.bbs.controller.ManagerContorller.updateUserPassword].
+2021-05-11 22:46:12.287 DEBUG 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:46:12.288 DEBUG 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:46:12.289 TRACE 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:46:12.290 TRACE 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$bOcomCY5iLt4vD8382B2BuHhZJQzdcqb.DA6smGFu/GP1.MwZcw7a, 290@qq.com, 0, 1, 31, 2021-04-26 17:31:55
+2021-05-11 22:46:12.291 DEBUG 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:46:12.387 DEBUG 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:46:12.387 DEBUG 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:46:12.388 TRACE 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:46:12.389 TRACE 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$bOcomCY5iLt4vD8382B2BuHhZJQzdcqb.DA6smGFu/GP1.MwZcw7a, 290@qq.com, 0, 1, 31, 2021-04-26 17:31:55
+2021-05-11 22:46:12.390 DEBUG 10116 --- [http-nio-8080-exec-2] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:46:12.499 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.UserMapper.updateUserByMap   : ==>  Preparing: update user_bbs set password=? , id=? where id=? 
+2021-05-11 22:46:12.499 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.UserMapper.updateUserByMap   : ==> Parameters: $2a$10$IJumTfkJtBpiEw49wQc.4e3DQ1flAPZSSrPLi8FeIeTYCDCGl6cgS(String), 7(Integer), 7(Integer)
+2021-05-11 22:46:12.504 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.UserMapper.updateUserByMap   : <==    Updates: 1
+2021-05-11 22:46:12.505  INFO 10116 --- [http-nio-8080-exec-2] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 22:46:12], [com.bbs.controller.ManagerContorller.updateUserPassword]方法执行完毕.返回码为[200]
+2021-05-11 22:46:39.888  INFO 10116 --- [http-nio-8080-exec-5] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 22:46:39], 访问了[com.bbs.controller.PostController.createTopic].
+2021-05-11 22:46:39.892 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:46:39.893 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:46:39.894 TRACE 10116 --- [http-nio-8080-exec-5] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:46:39.894 TRACE 10116 --- [http-nio-8080-exec-5] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$IJumTfkJtBpiEw49wQc.4e3DQ1flAPZSSrPLi8FeIeTYCDCGl6cgS, 290@qq.com, 0, 1, 31, 2021-04-26 17:31:55
+2021-05-11 22:46:39.895 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:46:39.896 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.insertTopic      : ==>  Preparing: insert into topic_bbs ( user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies ) values (?,?,?,?,?,?,?) 
+2021-05-11 22:46:39.896 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.insertTopic      : ==> Parameters: 7(Integer), 我刚刚修改了密码..(String), 0(Integer), 2021-05-11 22:46:39.895(Timestamp), 2021-05-11 22:46:39.895(Timestamp), 0(Integer), 0(Integer)
+2021-05-11 22:46:39.899 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.insertTopic      : <==    Updates: 1
+2021-05-11 22:46:39.899 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.d.TopicMapper.insertTopic!selectKey  : ==>  Preparing: select LAST_INSERT_ID() 
+2021-05-11 22:46:39.900 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.d.TopicMapper.insertTopic!selectKey  : ==> Parameters: 
+2021-05-11 22:46:39.900 TRACE 10116 --- [http-nio-8080-exec-5] c.b.d.TopicMapper.insertTopic!selectKey  : <==    Columns: LAST_INSERT_ID()
+2021-05-11 22:46:39.901 TRACE 10116 --- [http-nio-8080-exec-5] c.b.d.TopicMapper.insertTopic!selectKey  : <==        Row: 46
+2021-05-11 22:46:39.903 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.d.TopicMapper.insertTopic!selectKey  : <==      Total: 1
+2021-05-11 22:46:39.904 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.PostMapper.insertPost        : ==>  Preparing: insert into post_bbs ( user_id,entity_type,topic_id,post_content,create_time ) values (?,?,?,?,?) 
+2021-05-11 22:46:39.905 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.PostMapper.insertPost        : ==> Parameters: 7(Integer), 1(Integer), 46(Integer), ...(String), 2021-05-11 22:46:39.904(Timestamp)
+2021-05-11 22:46:40.159 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.PostMapper.insertPost        : <==    Updates: 1
+2021-05-11 22:46:40.160 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.dao.PostMapper.insertPost!selectKey  : ==>  Preparing: select LAST_INSERT_ID() 
+2021-05-11 22:46:40.160 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.dao.PostMapper.insertPost!selectKey  : ==> Parameters: 
+2021-05-11 22:46:40.161 TRACE 10116 --- [http-nio-8080-exec-5] c.b.dao.PostMapper.insertPost!selectKey  : <==    Columns: LAST_INSERT_ID()
+2021-05-11 22:46:40.161 TRACE 10116 --- [http-nio-8080-exec-5] c.b.dao.PostMapper.insertPost!selectKey  : <==        Row: 50
+2021-05-11 22:46:40.161 DEBUG 10116 --- [http-nio-8080-exec-5] c.b.dao.PostMapper.insertPost!selectKey  : <==      Total: 1
+2021-05-11 22:46:40.163 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.UserMapper.updateUserCredit  : ==>  Preparing: update user_bbs set credit=credit+? where id=? 
+2021-05-11 22:46:40.163 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.UserMapper.updateUserCredit  : ==> Parameters: 10(Integer), 7(Integer)
+2021-05-11 22:46:40.166 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.UserMapper.updateUserCredit  : <==    Updates: 1
+2021-05-11 22:46:40.167  INFO 10116 --- [http-nio-8080-exec-5] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 22:46:40], [com.bbs.controller.PostController.createTopic]方法执行完毕.返回码为[200]
+2021-05-11 22:46:49.661 DEBUG 10116 --- [http-nio-8080-exec-6] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:46:49.662 DEBUG 10116 --- [http-nio-8080-exec-6] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:46:49.664 TRACE 10116 --- [http-nio-8080-exec-6] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:46:49.665 TRACE 10116 --- [http-nio-8080-exec-6] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$IJumTfkJtBpiEw49wQc.4e3DQ1flAPZSSrPLi8FeIeTYCDCGl6cgS, 290@qq.com, 0, 1, 41, 2021-04-26 17:31:55
+2021-05-11 22:46:49.667 DEBUG 10116 --- [http-nio-8080-exec-6] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:46:54.121 DEBUG 10116 --- [http-nio-8080-exec-8] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:46:54.122 DEBUG 10116 --- [http-nio-8080-exec-8] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:46:54.124 TRACE 10116 --- [http-nio-8080-exec-8] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:46:54.124 TRACE 10116 --- [http-nio-8080-exec-8] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$IJumTfkJtBpiEw49wQc.4e3DQ1flAPZSSrPLi8FeIeTYCDCGl6cgS, 290@qq.com, 0, 1, 41, 2021-04-26 17:31:55
+2021-05-11 22:46:54.125 DEBUG 10116 --- [http-nio-8080-exec-8] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:47:04.155 DEBUG 10116 --- [http-nio-8080-exec-7] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:47:04.155 DEBUG 10116 --- [http-nio-8080-exec-7] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:47:04.157 TRACE 10116 --- [http-nio-8080-exec-7] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:47:04.158 TRACE 10116 --- [http-nio-8080-exec-7] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$IJumTfkJtBpiEw49wQc.4e3DQ1flAPZSSrPLi8FeIeTYCDCGl6cgS, 290@qq.com, 0, 1, 41, 2021-04-26 17:31:55
+2021-05-11 22:47:04.158 DEBUG 10116 --- [http-nio-8080-exec-7] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:47:17.694  INFO 10116 --- [http-nio-8080-exec-9] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 22:47:17], 访问了[com.bbs.controller.ManagerContorller.register].
+2021-05-11 22:47:17.696 DEBUG 10116 --- [http-nio-8080-exec-9] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 22:47:17.697 DEBUG 10116 --- [http-nio-8080-exec-9] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 22:47:17.698 TRACE 10116 --- [http-nio-8080-exec-9] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 22:47:17.698 TRACE 10116 --- [http-nio-8080-exec-9] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$IJumTfkJtBpiEw49wQc.4e3DQ1flAPZSSrPLi8FeIeTYCDCGl6cgS, 290@qq.com, 0, 1, 41, 2021-04-26 17:31:55
+2021-05-11 22:47:17.699 DEBUG 10116 --- [http-nio-8080-exec-9] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 22:47:17.699  INFO 10116 --- [http-nio-8080-exec-9] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 22:47:17], [com.bbs.controller.ManagerContorller.register]方法执行完毕.返回码为[2008]
+2021-05-11 23:06:58.119 DEBUG 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 23:06:58.120 DEBUG 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 23:06:58.122 TRACE 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 23:06:58.122 TRACE 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$IJumTfkJtBpiEw49wQc.4e3DQ1flAPZSSrPLi8FeIeTYCDCGl6cgS, 290@qq.com, 0, 1, 41, 2021-04-26 17:31:55
+2021-05-11 23:06:58.122 DEBUG 10116 --- [http-nio-8080-exec-3] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 23:07:07.096 DEBUG 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : ==>  Preparing: select id, user_name, password, email, type, status, credit, create_time from user_bbs where user_name=? 
+2021-05-11 23:07:07.097 DEBUG 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : ==> Parameters: lch77(String)
+2021-05-11 23:07:07.098 TRACE 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : <==    Columns: id, user_name, password, email, type, status, credit, create_time
+2021-05-11 23:07:07.099 TRACE 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : <==        Row: 7, lch77, $2a$10$IJumTfkJtBpiEw49wQc.4e3DQ1flAPZSSrPLi8FeIeTYCDCGl6cgS, 290@qq.com, 0, 1, 41, 2021-04-26 17:31:55
+2021-05-11 23:07:07.099 DEBUG 10116 --- [http-nio-8080-exec-4] c.b.dao.UserMapper.selectUserByUsername  : <==      Total: 1
+2021-05-11 23:08:24.766  INFO 10116 --- [http-nio-8080-exec-5] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:24], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:08:24.774 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:08:24.773  INFO 10116 --- [http-nio-8080-exec-6] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:24], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:08:24.776 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:08:24.779 TRACE 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:08:24.779 TRACE 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:08:24.780 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:08:24.782  INFO 10116 --- [http-nio-8080-exec-5] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:24], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:08:24.783 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:08:24.784 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 0(Integer)
+2021-05-11 23:08:24.787 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:08:24.787 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 46, 7, 我刚刚修改了密码.., 0, 2021-05-11 22:46:40, 2021-05-11 22:46:40, 0, 0
+2021-05-11 23:08:24.788 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 45, 7, 今天是5月9号, 0, 2021-05-09 16:52:41, 2021-05-09 16:52:41, 0, 0
+2021-05-11 23:08:24.789 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 43, 7, 今天心情还可以 知道为什么吗？, 0, 2021-05-06 11:25:55, 2021-05-06 12:03:55, 4, 2
+2021-05-11 23:08:24.790 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 44, 7, 今天心情还可以 知道为什么吗 这tm第二次发了’？, 0, 2021-05-06 11:36:29, 2021-05-06 11:36:29, 0, 0
+2021-05-11 23:08:24.791 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 42, 10, 啊？, 0, 2021-05-05 22:56:58, 2021-05-05 22:56:58, 1, 0
+2021-05-11 23:08:24.791 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 41, 1, 测试数据05052251, 0, 2021-05-05 22:51:48, 2021-05-05 22:51:48, 0, 0
+2021-05-11 23:08:24.791 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 40, 6, 这个帖子是测试主题帖发布服务第个测试数据0507, 0, 2021-05-05 22:46:35, 2021-05-05 22:46:35, 0, 0
+2021-05-11 23:08:24.792 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 7
+2021-05-11 23:08:24.792  INFO 10116 --- [http-nio-8080-exec-6] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:24], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:08:33.784  INFO 10116 --- [http-nio-8080-exec-8] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:33], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:08:33.784  INFO 10116 --- [http-nio-8080-exec-7] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:33], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:08:33.787 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:08:33.787 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:08:33.788 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 0(Integer)
+2021-05-11 23:08:33.788 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:08:33.800 TRACE 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:08:33.800 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:08:33.801 TRACE 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:08:33.802 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:08:33.802 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 46, 7, 我刚刚修改了密码.., 0, 2021-05-11 22:46:40, 2021-05-11 22:46:40, 0, 0
+2021-05-11 23:08:33.802 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 45, 7, 今天是5月9号, 0, 2021-05-09 16:52:41, 2021-05-09 16:52:41, 0, 0
+2021-05-11 23:08:33.804 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 43, 7, 今天心情还可以 知道为什么吗？, 0, 2021-05-06 11:25:55, 2021-05-06 12:03:55, 4, 2
+2021-05-11 23:08:33.804  INFO 10116 --- [http-nio-8080-exec-8] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:33], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:08:33.804 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 44, 7, 今天心情还可以 知道为什么吗 这tm第二次发了’？, 0, 2021-05-06 11:36:29, 2021-05-06 11:36:29, 0, 0
+2021-05-11 23:08:33.805 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 42, 10, 啊？, 0, 2021-05-05 22:56:58, 2021-05-05 22:56:58, 1, 0
+2021-05-11 23:08:33.806 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 41, 1, 测试数据05052251, 0, 2021-05-05 22:51:48, 2021-05-05 22:51:48, 0, 0
+2021-05-11 23:08:33.806 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 40, 6, 这个帖子是测试主题帖发布服务第个测试数据0507, 0, 2021-05-05 22:46:35, 2021-05-05 22:46:35, 0, 0
+2021-05-11 23:08:33.807 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 7
+2021-05-11 23:08:33.808  INFO 10116 --- [http-nio-8080-exec-7] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:33], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:08:47.120  INFO 10116 --- [http-nio-8080-exec-9] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:47], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:08:47.122 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:08:47.122 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:08:47.124 TRACE 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:08:47.125 TRACE 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:08:47.126 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:08:47.126  INFO 10116 --- [http-nio-8080-exec-9] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:47], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:08:47.127  WARN 10116 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2021-05-11 23:08:51.183  INFO 10116 --- [http-nio-8080-exec-1] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:51], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:08:51.184  INFO 10116 --- [http-nio-8080-exec-3] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:51], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:08:51.185 DEBUG 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:08:51.185 DEBUG 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:08:51.186 DEBUG 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:08:51.186 DEBUG 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 0(Integer)
+2021-05-11 23:08:51.186 TRACE 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:08:51.187 TRACE 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:08:51.187 DEBUG 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:08:51.188  INFO 10116 --- [http-nio-8080-exec-1] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:51], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:08:51.188 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:08:51.188 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 46, 7, 我刚刚修改了密码.., 0, 2021-05-11 22:46:40, 2021-05-11 22:46:40, 0, 0
+2021-05-11 23:08:51.189 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 45, 7, 今天是5月9号, 0, 2021-05-09 16:52:41, 2021-05-09 16:52:41, 0, 0
+2021-05-11 23:08:51.192 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 43, 7, 今天心情还可以 知道为什么吗？, 0, 2021-05-06 11:25:55, 2021-05-06 12:03:55, 4, 2
+2021-05-11 23:08:51.192 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 44, 7, 今天心情还可以 知道为什么吗 这tm第二次发了’？, 0, 2021-05-06 11:36:29, 2021-05-06 11:36:29, 0, 0
+2021-05-11 23:08:51.193 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 42, 10, 啊？, 0, 2021-05-05 22:56:58, 2021-05-05 22:56:58, 1, 0
+2021-05-11 23:08:51.193 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 41, 1, 测试数据05052251, 0, 2021-05-05 22:51:48, 2021-05-05 22:51:48, 0, 0
+2021-05-11 23:08:51.193 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 40, 6, 这个帖子是测试主题帖发布服务第个测试数据0507, 0, 2021-05-05 22:46:35, 2021-05-05 22:46:35, 0, 0
+2021-05-11 23:08:51.193 DEBUG 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 7
+2021-05-11 23:08:51.194  INFO 10116 --- [http-nio-8080-exec-3] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:08:51], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:09:00.163  INFO 10116 --- [http-nio-8080-exec-4] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:00], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:09:00.164  INFO 10116 --- [http-nio-8080-exec-2] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:00], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:09:00.166 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:09:00.167 DEBUG 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:09:00.167 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 0(Integer)
+2021-05-11 23:09:00.167 DEBUG 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:09:00.169 TRACE 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:09:00.169 TRACE 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:09:00.169 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:09:00.170 DEBUG 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:09:00.170 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 46, 7, 我刚刚修改了密码.., 0, 2021-05-11 22:46:40, 2021-05-11 22:46:40, 0, 0
+2021-05-11 23:09:00.170  INFO 10116 --- [http-nio-8080-exec-4] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:00], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:09:00.170 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 45, 7, 今天是5月9号, 0, 2021-05-09 16:52:41, 2021-05-09 16:52:41, 0, 0
+2021-05-11 23:09:00.171 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 43, 7, 今天心情还可以 知道为什么吗？, 0, 2021-05-06 11:25:55, 2021-05-06 12:03:55, 4, 2
+2021-05-11 23:09:00.171 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 44, 7, 今天心情还可以 知道为什么吗 这tm第二次发了’？, 0, 2021-05-06 11:36:29, 2021-05-06 11:36:29, 0, 0
+2021-05-11 23:09:00.172 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 42, 10, 啊？, 0, 2021-05-05 22:56:58, 2021-05-05 22:56:58, 1, 0
+2021-05-11 23:09:00.173 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 41, 1, 测试数据05052251, 0, 2021-05-05 22:51:48, 2021-05-05 22:51:48, 0, 0
+2021-05-11 23:09:00.174 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 40, 6, 这个帖子是测试主题帖发布服务第个测试数据0507, 0, 2021-05-05 22:46:35, 2021-05-05 22:46:35, 0, 0
+2021-05-11 23:09:00.175 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 7
+2021-05-11 23:09:00.176  INFO 10116 --- [http-nio-8080-exec-2] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:00], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:09:31.337  INFO 10116 --- [http-nio-8080-exec-6] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:31], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:09:31.337  INFO 10116 --- [http-nio-8080-exec-5] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:31], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:09:31.339 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:09:31.339 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:09:31.339 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 42(Integer)
+2021-05-11 23:09:31.339 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:09:31.341 TRACE 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:09:31.341 TRACE 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:09:31.341 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:09:31.341 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:09:31.341 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 4, 2, 发个帖子哦 有人吗？, 0, 2021-04-15 23:36:41, 2021-04-15 23:36:41, 6, 1
+2021-05-11 23:09:31.341 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 3, 2, ????? ????, 0, 2021-04-15 23:36:23, 2021-04-15 23:36:23, 1, 0
+2021-05-11 23:09:31.342  INFO 10116 --- [http-nio-8080-exec-5] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:31], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:09:31.342 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 2, 2, ????? ????, 0, 2021-04-15 23:35:17, 2021-04-15 23:35:17, 1, 0
+2021-05-11 23:09:31.343 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 1, 2, ????? ????, 0, 2021-04-15 23:19:52, 2021-04-15 23:19:52, 1, 0
+2021-05-11 23:09:31.343 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 4
+2021-05-11 23:09:31.343  INFO 10116 --- [http-nio-8080-exec-6] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:31], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:09:52.468  INFO 10116 --- [http-nio-8080-exec-8] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:52], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:09:52.468  INFO 10116 --- [http-nio-8080-exec-7] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:52], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:09:52.469 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:09:52.469 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:09:52.470 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:09:52.470 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 42(Integer)
+2021-05-11 23:09:52.471 TRACE 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:09:52.471 TRACE 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:09:52.471 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:09:52.471 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:09:52.472 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 4, 2, 发个帖子哦 有人吗？, 0, 2021-04-15 23:36:41, 2021-04-15 23:36:41, 6, 1
+2021-05-11 23:09:52.472  INFO 10116 --- [http-nio-8080-exec-8] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:52], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:09:52.473 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 3, 2, ????? ????, 0, 2021-04-15 23:36:23, 2021-04-15 23:36:23, 1, 0
+2021-05-11 23:09:52.473 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 2, 2, ????? ????, 0, 2021-04-15 23:35:17, 2021-04-15 23:35:17, 1, 0
+2021-05-11 23:09:52.473 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 1, 2, ????? ????, 0, 2021-04-15 23:19:52, 2021-04-15 23:19:52, 1, 0
+2021-05-11 23:09:52.473 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 4
+2021-05-11 23:09:52.474  INFO 10116 --- [http-nio-8080-exec-7] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:52], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:09:53.762  INFO 10116 --- [http-nio-8080-exec-9] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:53], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:09:53.763  INFO 10116 --- [http-nio-8080-exec-10] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:53], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:09:53.764 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:09:53.764 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:09:53.765 DEBUG 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:09:53.765 DEBUG 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 42(Integer)
+2021-05-11 23:09:53.766 TRACE 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:09:53.766 TRACE 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:09:53.766 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:09:53.766  INFO 10116 --- [http-nio-8080-exec-9] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:53], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:09:53.767 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:09:53.767 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 4, 2, 发个帖子哦 有人吗？, 0, 2021-04-15 23:36:41, 2021-04-15 23:36:41, 6, 1
+2021-05-11 23:09:53.768 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 3, 2, ????? ????, 0, 2021-04-15 23:36:23, 2021-04-15 23:36:23, 1, 0
+2021-05-11 23:09:53.768 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 2, 2, ????? ????, 0, 2021-04-15 23:35:17, 2021-04-15 23:35:17, 1, 0
+2021-05-11 23:09:53.768 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 1, 2, ????? ????, 0, 2021-04-15 23:19:52, 2021-04-15 23:19:52, 1, 0
+2021-05-11 23:09:53.768 DEBUG 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 4
+2021-05-11 23:09:53.769  INFO 10116 --- [http-nio-8080-exec-10] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:53], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:09:54.254  INFO 10116 --- [http-nio-8080-exec-1] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:54], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:09:54.254  INFO 10116 --- [http-nio-8080-exec-3] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:54], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:09:54.255 DEBUG 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:09:54.255 DEBUG 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:09:54.255 DEBUG 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:09:54.255 DEBUG 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 42(Integer)
+2021-05-11 23:09:54.257 TRACE 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:09:54.257 TRACE 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:09:54.257 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:09:54.257 DEBUG 10116 --- [http-nio-8080-exec-1] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:09:54.257 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 4, 2, 发个帖子哦 有人吗？, 0, 2021-04-15 23:36:41, 2021-04-15 23:36:41, 6, 1
+2021-05-11 23:09:54.257  INFO 10116 --- [http-nio-8080-exec-1] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:54], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:09:54.257 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 3, 2, ????? ????, 0, 2021-04-15 23:36:23, 2021-04-15 23:36:23, 1, 0
+2021-05-11 23:09:54.257 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 2, 2, ????? ????, 0, 2021-04-15 23:35:17, 2021-04-15 23:35:17, 1, 0
+2021-05-11 23:09:54.258 TRACE 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 1, 2, ????? ????, 0, 2021-04-15 23:19:52, 2021-04-15 23:19:52, 1, 0
+2021-05-11 23:09:54.258 DEBUG 10116 --- [http-nio-8080-exec-3] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 4
+2021-05-11 23:09:54.258  INFO 10116 --- [http-nio-8080-exec-3] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:54], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:09:56.839  INFO 10116 --- [http-nio-8080-exec-4] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:56], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:09:56.841 DEBUG 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:09:56.841 DEBUG 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:09:56.842  INFO 10116 --- [http-nio-8080-exec-2] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:56], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:09:56.843 TRACE 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:09:56.843 TRACE 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:09:56.843 DEBUG 10116 --- [http-nio-8080-exec-4] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:09:56.844 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:09:56.844  INFO 10116 --- [http-nio-8080-exec-4] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:56], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:09:56.845 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 42(Integer)
+2021-05-11 23:09:56.846 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:09:56.847 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 4, 2, 发个帖子哦 有人吗？, 0, 2021-04-15 23:36:41, 2021-04-15 23:36:41, 6, 1
+2021-05-11 23:09:56.847 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 3, 2, ????? ????, 0, 2021-04-15 23:36:23, 2021-04-15 23:36:23, 1, 0
+2021-05-11 23:09:56.848 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 2, 2, ????? ????, 0, 2021-04-15 23:35:17, 2021-04-15 23:35:17, 1, 0
+2021-05-11 23:09:56.848 TRACE 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 1, 2, ????? ????, 0, 2021-04-15 23:19:52, 2021-04-15 23:19:52, 1, 0
+2021-05-11 23:09:56.848 DEBUG 10116 --- [http-nio-8080-exec-2] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 4
+2021-05-11 23:09:56.849  INFO 10116 --- [http-nio-8080-exec-2] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:09:56], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:10:24.386  INFO 10116 --- [http-nio-8080-exec-5] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:10:24], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:10:24.386  INFO 10116 --- [http-nio-8080-exec-6] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:10:24], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:10:24.388 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:10:24.388 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:10:24.388 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:10:24.388 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 42(Integer)
+2021-05-11 23:10:24.389 TRACE 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:10:24.389 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:10:24.390 TRACE 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:10:24.390 DEBUG 10116 --- [http-nio-8080-exec-5] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:10:24.390 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 4, 2, 发个帖子哦 有人吗？, 0, 2021-04-15 23:36:41, 2021-04-15 23:36:41, 6, 1
+2021-05-11 23:10:24.390 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 3, 2, ????? ????, 0, 2021-04-15 23:36:23, 2021-04-15 23:36:23, 1, 0
+2021-05-11 23:10:24.390  INFO 10116 --- [http-nio-8080-exec-5] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:10:24], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:10:24.390 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 2, 2, ????? ????, 0, 2021-04-15 23:35:17, 2021-04-15 23:35:17, 1, 0
+2021-05-11 23:10:24.391 TRACE 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 1, 2, ????? ????, 0, 2021-04-15 23:19:52, 2021-04-15 23:19:52, 1, 0
+2021-05-11 23:10:24.391 DEBUG 10116 --- [http-nio-8080-exec-6] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 4
+2021-05-11 23:10:24.392  INFO 10116 --- [http-nio-8080-exec-6] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:10:24], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:10:31.797  INFO 10116 --- [http-nio-8080-exec-8] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:10:31], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:10:31.799 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:10:31.799 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:10:31.801 TRACE 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:10:31.801 TRACE 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:10:31.801 DEBUG 10116 --- [http-nio-8080-exec-8] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:10:31.802  INFO 10116 --- [http-nio-8080-exec-8] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:10:31], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:10:31.803  INFO 10116 --- [http-nio-8080-exec-7] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:10:31], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:10:31.804 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:10:31.805 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 42(Integer)
+2021-05-11 23:10:31.807 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:10:31.807 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 4, 2, 发个帖子哦 有人吗？, 0, 2021-04-15 23:36:41, 2021-04-15 23:36:41, 6, 1
+2021-05-11 23:10:31.807 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 3, 2, ????? ????, 0, 2021-04-15 23:36:23, 2021-04-15 23:36:23, 1, 0
+2021-05-11 23:10:31.807 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 2, 2, ????? ????, 0, 2021-04-15 23:35:17, 2021-04-15 23:35:17, 1, 0
+2021-05-11 23:10:31.808 TRACE 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 1, 2, ????? ????, 0, 2021-04-15 23:19:52, 2021-04-15 23:19:52, 1, 0
+2021-05-11 23:10:31.808 DEBUG 10116 --- [http-nio-8080-exec-7] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 4
+2021-05-11 23:10:31.809  INFO 10116 --- [http-nio-8080-exec-7] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:10:31], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]
+2021-05-11 23:11:12.460  INFO 10116 --- [http-nio-8080-exec-9] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:11:12], 访问了[com.bbs.controller.PostController.cacPageNum].
+2021-05-11 23:11:12.461  INFO 10116 --- [http-nio-8080-exec-10] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:11:12], 访问了[com.bbs.controller.PostController.topics].
+2021-05-11 23:11:12.462 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : ==>  Preparing: select COUNT(*) FROM topic_bbs 
+2021-05-11 23:11:12.462 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : ==> Parameters: 
+2021-05-11 23:11:12.463 DEBUG 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : ==>  Preparing: select topic_id,user_id,topic_title,digest,create_time,last_post,topic_views,topic_replies from topic_bbs where digest!=2 order by digest desc,last_post desc limit ? offset ? 
+2021-05-11 23:11:12.463 TRACE 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==    Columns: COUNT(*)
+2021-05-11 23:11:12.463 TRACE 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==        Row: 46
+2021-05-11 23:11:12.464 DEBUG 10116 --- [http-nio-8080-exec-9] com.bbs.dao.TopicMapper.getTopicCount    : <==      Total: 1
+2021-05-11 23:11:12.464 DEBUG 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : ==> Parameters: 7(Integer), 0(Integer)
+2021-05-11 23:11:12.464  INFO 10116 --- [http-nio-8080-exec-9] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:11:12], [com.bbs.controller.PostController.cacPageNum]方法执行完毕.返回码为[200]
+2021-05-11 23:11:12.465 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==    Columns: topic_id, user_id, topic_title, digest, create_time, last_post, topic_views, topic_replies
+2021-05-11 23:11:12.466 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 46, 7, 我刚刚修改了密码.., 0, 2021-05-11 22:46:40, 2021-05-11 22:46:40, 0, 0
+2021-05-11 23:11:12.466 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 45, 7, 今天是5月9号, 0, 2021-05-09 16:52:41, 2021-05-09 16:52:41, 0, 0
+2021-05-11 23:11:12.467 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 43, 7, 今天心情还可以 知道为什么吗？, 0, 2021-05-06 11:25:55, 2021-05-06 12:03:55, 4, 2
+2021-05-11 23:11:12.467 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 44, 7, 今天心情还可以 知道为什么吗 这tm第二次发了’？, 0, 2021-05-06 11:36:29, 2021-05-06 11:36:29, 0, 0
+2021-05-11 23:11:12.467 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 42, 10, 啊？, 0, 2021-05-05 22:56:58, 2021-05-05 22:56:58, 1, 0
+2021-05-11 23:11:12.468 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 41, 1, 测试数据05052251, 0, 2021-05-05 22:51:48, 2021-05-05 22:51:48, 0, 0
+2021-05-11 23:11:12.468 TRACE 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==        Row: 40, 6, 这个帖子是测试主题帖发布服务第个测试数据0507, 0, 2021-05-05 22:46:35, 2021-05-05 22:46:35, 0, 0
+2021-05-11 23:11:12.468 DEBUG 10116 --- [http-nio-8080-exec-10] com.bbs.dao.TopicMapper.selectTopics     : <==      Total: 7
+2021-05-11 23:11:12.468  INFO 10116 --- [http-nio-8080-exec-10] com.bbs.bbsApp                           : 用户[127.0.0.1], 在[2021-05-11 23:11:12], [com.bbs.controller.PostController.topics]方法执行完毕.返回码为[200]

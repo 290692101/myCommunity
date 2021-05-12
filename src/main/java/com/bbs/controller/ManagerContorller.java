@@ -81,8 +81,15 @@ public class ManagerContorller {
             return ResultTool.fail(ResultCode.PARAM_NOT_VALID);
 
         }
+        //从context中保存的用户对象获取用户id
+        Integer currUserId=ms.getUserByUsername(currUser.getUsername()).getId();
+        if(ms.updateUserPassword(currUserId,password)){
 
-        return ResultTool.success();
+            return ResultTool.success();
+        }
+        return  ResultTool.fail();
+
+
 
     }
 

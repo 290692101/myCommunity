@@ -1353,3 +1353,90 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 2021-05-11 22:29:45.211  INFO 9720 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-05-11 22:29:45.212  INFO 9720 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-05-11 22:29:45.222  INFO 9720 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-11 22:31:12.168  INFO 8336 --- [main] bbs.dao.UserTest                         : Starting UserTest on home-pc with PID 8336 (started by 290 in C:\Users\290\Desktop\demo0219)
+2021-05-11 22:31:12.178  INFO 8336 --- [main] bbs.dao.UserTest                         : The following profiles are active: bbs
+2021-05-11 22:31:13.383  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-11 22:31:13.437  INFO 8336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 JPA repository interfaces.
+2021-05-11 22:31:14.466  INFO 8336 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:31:14.502  INFO 8336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-11 22:31:14.510  WARN 8336 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-05-11 22:31:15.189  INFO 8336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-11 22:31:15.269  INFO 8336 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-11 22:31:15.376  INFO 8336 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-05-11 22:31:15.438  WARN 8336 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-11 22:31:15.659  INFO 8336 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-11 22:31:15.917  INFO 8336 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-05-11 22:31:16.301  INFO 8336 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-11 22:31:16.314  INFO 8336 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:31:17.713  INFO 8336 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5dba3fdc, org.springframework.security.web.context.SecurityContextPersistenceFilter@290807e5, org.springframework.security.web.header.HeaderWriterFilter@422ba9b7, org.springframework.web.filter.CorsFilter@bea5941, org.springframework.security.web.authentication.logout.LogoutFilter@2adc1e84, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74eab077, org.springframework.security.web.session.ConcurrentSessionFilter@71beada8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43f99817, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ae958b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@df6f19b, org.springframework.security.web.session.SessionManagementFilter@4b8a0d03, org.springframework.security.web.access.ExceptionTranslationFilter@19e801b5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d654b5f]
+2021-05-11 22:31:18.295  WARN 8336 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-11 22:31:18.702  INFO 8336 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-11 22:31:18.704  INFO 8336 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-11 22:31:18.715  INFO 8336 --- [main] bbs.dao.UserTest                         : Started UserTest in 7.149 seconds (JVM running for 8.349)
+2021-05-11 22:31:19.052 DEBUG 8336 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==>  Preparing: update user_bbs set password=? , id=? where id=? 
+2021-05-11 22:31:19.084 DEBUG 8336 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==> Parameters: encode(String), 1(Integer), 1(Integer)
+2021-05-11 22:31:19.088 DEBUG 8336 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : <==    Updates: 1
+2021-05-11 22:31:19.105  INFO 8336 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:31:19.108  INFO 8336 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:31:19.109  INFO 8336 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-11 22:31:19.123  INFO 8336 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-11 22:39:13.884  INFO 9076 --- [main] bbs.service.ManagerServiceTest           : Starting ManagerServiceTest on home-pc with PID 9076 (started by 290 in C:\Users\290\Desktop\demo0219)
+2021-05-11 22:39:13.886  INFO 9076 --- [main] bbs.service.ManagerServiceTest           : The following profiles are active: bbs
+2021-05-11 22:39:15.245  INFO 9076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-11 22:39:15.296  INFO 9076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 JPA repository interfaces.
+2021-05-11 22:39:16.353  INFO 9076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:39:16.389  INFO 9076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-11 22:39:16.395  WARN 9076 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-05-11 22:39:17.086  INFO 9076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-11 22:39:17.175  INFO 9076 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-11 22:39:17.287  INFO 9076 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-05-11 22:39:17.366  WARN 9076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-11 22:39:17.614  INFO 9076 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-11 22:39:17.854  INFO 9076 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-05-11 22:39:18.209  INFO 9076 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-11 22:39:18.225  INFO 9076 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:39:19.550  INFO 9076 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@103478b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@16949dfa, org.springframework.security.web.header.HeaderWriterFilter@19e801b5, org.springframework.web.filter.CorsFilter@270f7b4d, org.springframework.security.web.authentication.logout.LogoutFilter@4ae958b0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3cf70afa, org.springframework.security.web.session.ConcurrentSessionFilter@45b27ad3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43778371, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e2c8ef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56b704ea, org.springframework.security.web.session.SessionManagementFilter@50f05307, org.springframework.security.web.access.ExceptionTranslationFilter@6a04d2a4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@545f0b6]
+2021-05-11 22:39:20.141  WARN 9076 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-11 22:39:20.550  INFO 9076 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-11 22:39:20.551  INFO 9076 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-11 22:39:20.564  INFO 9076 --- [main] bbs.service.ManagerServiceTest           : Started ManagerServiceTest in 7.234 seconds (JVM running for 8.443)
+2021-05-11 22:39:21.021 DEBUG 9076 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==>  Preparing: update user_bbs set password=? , id=? where id=? 
+2021-05-11 22:39:21.057 DEBUG 9076 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==> Parameters: $2a$10$VsH577M.uEKd5et.xtOKIut0.4umGftYClfGx1eZsrFdPk7MoHZA.(String), 1(Integer), 1(Integer)
+2021-05-11 22:39:21.061 DEBUG 9076 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : <==    Updates: 1
+2021-05-11 22:39:21.062  WARN 9076 --- [main] bbs.dao.UserTest                         : true
+2021-05-11 22:39:21.083  INFO 9076 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:39:21.086  INFO 9076 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:39:21.087  INFO 9076 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-11 22:39:21.102  INFO 9076 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-11 22:40:05.475  INFO 1776 --- [main] bbs.service.ManagerServiceTest           : Starting ManagerServiceTest on home-pc with PID 1776 (started by 290 in C:\Users\290\Desktop\demo0219)
+2021-05-11 22:40:05.476  INFO 1776 --- [main] bbs.service.ManagerServiceTest           : The following profiles are active: bbs
+2021-05-11 22:40:06.593  INFO 1776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-11 22:40:06.650  INFO 1776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 JPA repository interfaces.
+2021-05-11 22:40:07.749  INFO 1776 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:40:07.786  INFO 1776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-11 22:40:07.793  WARN 1776 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-05-11 22:40:08.498  INFO 1776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-11 22:40:08.588  INFO 1776 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-11 22:40:08.691  INFO 1776 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-05-11 22:40:08.753  WARN 1776 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-11 22:40:08.999  INFO 1776 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-11 22:40:09.259  INFO 1776 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-05-11 22:40:09.647  INFO 1776 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-11 22:40:09.661  INFO 1776 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:40:10.995  INFO 1776 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2759749, org.springframework.security.web.context.SecurityContextPersistenceFilter@31f1b268, org.springframework.security.web.header.HeaderWriterFilter@16949dfa, org.springframework.web.filter.CorsFilter@4efed0e0, org.springframework.security.web.authentication.logout.LogoutFilter@32dbca45, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@45832b85, org.springframework.security.web.session.ConcurrentSessionFilter@144440f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7598d675, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@459e120b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ac0ed65, org.springframework.security.web.session.SessionManagementFilter@43778371, org.springframework.security.web.access.ExceptionTranslationFilter@8ee03f5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59b3f754]
+2021-05-11 22:40:11.568  WARN 1776 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-11 22:40:11.974  INFO 1776 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-11 22:40:11.976  INFO 1776 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-11 22:40:11.985  INFO 1776 --- [main] bbs.service.ManagerServiceTest           : Started ManagerServiceTest in 7.05 seconds (JVM running for 8.209)
+2021-05-11 22:40:12.417 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==>  Preparing: update user_bbs set password=? , id=? where id=? 
+2021-05-11 22:40:12.459 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==> Parameters: $2a$10$HokGt8IHRBtXHxSLzFkfgehP91XOTEHYUqY9cucZe5o7RJiQ54b0C(String), 1(Integer), 1(Integer)
+2021-05-11 22:40:12.463 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : <==    Updates: 1
+2021-05-11 22:40:12.464  WARN 1776 --- [main] bbs.dao.UserTest                         : true
+2021-05-11 22:40:12.551 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==>  Preparing: update user_bbs set password=? , id=? where id=? 
+2021-05-11 22:40:12.552 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : ==> Parameters: $2a$10$gmfCWhpZ5ExakUaUi16EY.ihL0fqpCJk7GAa.ADgZGfUkiZnVpyHG(String), 1000(Integer), 1000(Integer)
+2021-05-11 22:40:12.555 DEBUG 1776 --- [main] com.bbs.dao.UserMapper.updateUserByMap   : <==    Updates: 0
+2021-05-11 22:40:12.555  WARN 1776 --- [main] bbs.dao.UserTest                         : false
+2021-05-11 22:40:12.573  INFO 1776 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-11 22:40:12.576  INFO 1776 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-11 22:40:12.577  INFO 1776 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-11 22:40:12.589  INFO 1776 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

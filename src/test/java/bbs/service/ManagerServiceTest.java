@@ -43,4 +43,13 @@ public class ManagerServiceTest {
         ms.selectTopics(0,7,7);
     }
 
+    @Test
+    //测试修改密码服务
+    public void updateUserPassword(){
+        boolean flag=ms.updateUserPassword(1,"000000");
+        logger.warn(String.valueOf(flag));
+        flag=ms.updateUserPassword(1000,"000000");
+        logger.warn(String.valueOf(flag));
+    }
+
 }
